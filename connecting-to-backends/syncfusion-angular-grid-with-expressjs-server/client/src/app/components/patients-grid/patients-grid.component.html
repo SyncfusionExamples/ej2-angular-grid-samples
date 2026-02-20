@@ -1,0 +1,122 @@
+<div class="grid-container">
+  <ejs-grid
+    #grid
+    [dataSource]="dataManager"
+    [allowPaging]="true"
+    [allowSorting]="true"
+    [allowFiltering]="true"
+    [editSettings]="editSettings"
+    [toolbar]="toolbar"
+    [pageSettings]="pageSettings"
+    [filterSettings]="filterSettings"
+    (actionComplete)="actionComplete($event)">
+    
+    <!-- Patient ID Column (Primary Key) -->
+    <e-columns>
+      <e-column
+      field="PatientID"
+      headerText="Patient ID"
+      width="100"
+      [isPrimaryKey]="true"
+      [visible]="true"
+      [allowEditing]="false"
+      textAlign="Right">
+    </e-column>
+
+    <!-- Patient Name -->
+    <e-column
+      field="PatientName"
+      headerText="Patient Name"
+      width="180"
+      [validationRules]="validationRules">
+    </e-column>
+
+    <!-- Age -->
+    <e-column
+      field="Age"
+      headerText="Age"
+      width="80"
+      textAlign="Right"
+      [validationRules]="{ required: true, min: 0, max: 150 }">
+    </e-column>
+
+    <!-- Gender -->
+    <e-column
+      field="Gender"
+      headerText="Gender"
+      width="100"
+      editType="dropdownedit">
+    </e-column>
+
+    <!-- Contact Information -->
+    <e-column
+      field="Email"
+      headerText="Email"
+      width="200"
+      [validationRules]="{ email: true }">
+    </e-column>
+
+    <e-column
+      field="Phone"
+      headerText="Phone"
+      width="140">
+    </e-column>
+
+    <!-- Medical Staff -->
+    <e-column
+      field="DoctorName"
+      headerText="Doctor Name"
+      width="180"
+      [validationRules]="validationRules">
+    </e-column>
+
+    <e-column
+      field="Specialty"
+      headerText="Specialty"
+      width="150">
+    </e-column>
+
+    <!-- Hospital Information -->
+    <e-column
+      field="HospitalName"
+      headerText="Hospital Name"
+      width="200">
+    </e-column>
+
+    <e-column
+      field="City"
+      headerText="City"
+      width="130">
+    </e-column>
+
+    <e-column
+      field="Country"
+      headerText="Country"
+      width="120"
+      editType="dropdownedit">
+    </e-column>
+
+    <!-- Medical Information -->
+    <e-column
+      field="AdmissionDate"
+      headerText="Admission Date"
+      width="140"
+      type="date"
+      format="yMd"
+      editType="datepickeredit">
+    </e-column>
+
+    <e-column
+      field="Diagnosis"
+      headerText="Diagnosis"
+      width="200">
+    </e-column>
+
+    <e-column
+      field="Status"
+      headerText="Status"
+      width="150">
+    </e-column>
+    </e-columns>
+  </ejs-grid>
+</div>
