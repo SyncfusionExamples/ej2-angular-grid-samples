@@ -1,0 +1,41 @@
+<h2>Appointment Details</h2>
+
+<ejs-grid [dataSource]="data" [query]="query" [allowSorting]="true" [allowFiltering]="true" [allowPaging]="true"
+  [filterSettings]="filterSettings" [toolbar]="toolbarOptions" height="400">
+  <e-columns>
+    <e-column field="PatientId" headerText="Patient ID" width="120" isPrimaryKey="true"></e-column>
+    <e-column field="Name" headerText="Name" width="150">
+      <ng-template #template let-data>
+        <div>
+          <div class="empimg">
+            <span *ngIf="data.PatientImg === 'userMale'" class="e-userimg sf-icon-Male">
+            </span>
+            <span *ngIf="data.PatientImg === 'userFemale'" class="e-userimg sf-icon-FeMale">
+            </span>
+          </div>
+          <span id="Emptext">{{data.Name}}</span>
+        </div>
+      </ng-template>
+    </e-column>
+    <e-column field="Age" headerText="Age" width="80" editType="numericedit" textAlign="Right"></e-column>
+    <e-column field="Gender" headerText="Gender" width="120"></e-column>
+    <e-column field="Disease" headerText="Health Issue" width="100"></e-column>
+    <e-column field="AppointmentDate" headerText="Appointment Date" width="120" format="yMd"
+      textAlign="Right"></e-column>
+    <e-column field="TimeSlot" headerText="Time" width="100" textAlign="Right"></e-column>
+    <e-column field="Email" headerText="Email Address" width="150">
+      <ng-template #template let-data>
+        <div>
+          <a href="#">
+            {{data.Email}}
+          </a>
+        </div>
+      </ng-template>
+    </e-column>
+    <e-column field="Contact" headerText="Contact Number" width="150" textAlign="Right"></e-column>
+  </e-columns>
+</ejs-grid>
+
+<div class="backbtn">
+  <button ejs-button cssClass="e-primary" (click)="btnClick()">Home Page</button>
+</div>

@@ -1,0 +1,72 @@
+<ejs-grid
+  #grid
+  [allowPaging]="true"
+  [allowSorting]="true"
+  [allowFiltering]="true"
+  [toolbar]="toolbar"
+  [editSettings]="editSettings"
+  [pageSettings]="pageSettings"
+  [filterSettings]="filterSettings"
+  (dataStateChange)="dataStateChange($event)"
+  (dataSourceChanged)="dataSourceChanged($event)"
+>
+  <e-columns>
+    <e-column
+      field="TaskId"
+      headerText="ID"
+      [isPrimaryKey]="true"
+      [visible]="false"
+    ></e-column>
+    <e-column
+      field="TaskName"
+      headerText="Task"
+      width="200"
+      [validationRules]="{ required: true }"
+    ></e-column>
+    <e-column
+      field="AssignedTo"
+      headerText="Assigned To"
+      width="120"
+      [validationRules]="{ required: true }"
+    ></e-column>
+    <e-column
+      field="DueDate"
+      headerText="Due Date"
+      type="date"
+      format="yMd"
+      textAlign="Right"
+      editType="datepickeredit"
+      width="120"
+    ></e-column>
+    <e-column
+      field="Status"
+      headerText="Status"
+      editType="dropdownedit"
+      width="140"
+      [edit]="{ params: statusEditParams }"
+    ></e-column>
+    <e-column
+      field="Priority"
+      headerText="Priority"
+      editType="dropdownedit"
+      width="80"
+      [edit]="{ params: priorityEditParams }"
+    ></e-column>
+    <e-column
+      field="EstimatedHours"
+      headerText="Est. Hours"
+      editType="numericedit"
+      textAlign="Right"
+      width="80"
+    ></e-column>
+    <e-column
+      field="IsActive"
+      headerText="Active"
+      type="boolean"
+      displayAsCheckBox="true"
+      textAlign="Center"
+      width="100"
+      editType="booleanedit"
+    ></e-column>
+  </e-columns>
+</ejs-grid>

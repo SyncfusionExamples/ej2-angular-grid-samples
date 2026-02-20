@@ -1,0 +1,32 @@
+.grid-container {
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid header styling */
+::ng-deep .e-grid .e-gridheader {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+/* Toolbar styling */
+::ng-deep .e-grid .e-toolbar {
+  background: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Status column color coding */
+::ng-deep .e-grid td[aria-label*="Status"] {
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid-container {
+    padding: 10px;
+    margin: 10px;
+  }
+}

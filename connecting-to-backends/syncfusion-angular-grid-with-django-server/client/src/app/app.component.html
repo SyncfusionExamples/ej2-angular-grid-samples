@@ -1,0 +1,89 @@
+<ejs-grid
+  #grid
+  [dataSource]="data"
+  [allowPaging]="true"
+  [pageSettings]="pageSettings"
+  [allowSorting]="true"
+  [allowFiltering]="true"
+  [filterSettings]="filterSettings"
+  [toolbar]="toolbar"
+  [editSettings]="editSettings"
+  [selectionSettings]="selectionSettings"
+  gridLines="Both"
+>
+  <e-columns>
+    <e-column field="record_id" headerText="Record ID" width="120" [isPrimaryKey]="true" [visible]="false"></e-column>
+    
+    <e-column field="isbn_number" headerText="ISBN Number" width="170" [validationRules]="ISBNValidationRule"></e-column>
+    
+    <e-column field="book_title" headerText="Book Title" width="240" [validationRules]="bookTitleValidationRule"></e-column>
+
+    <e-column field="author_name" headerText="Author Name" width="200" [validationRules]="authorNameValidationRule"></e-column>
+
+    <e-column field="genre" headerText="Genre" width="160" editType="dropdownedit" textAlign="Center" [filter]="checkBoxFilterSettings" [validationRules]="genreValidationRule">
+      <ng-template #template let-data>
+        <span [class]="getGenreClass(data.genre)" [title]="data.genre || '—'">
+          {{ data.genre || '—' }}
+        </span>
+      </ng-template>
+    </e-column>
+
+    <e-column field="borrower_name" headerText="Borrower Name" width="200" [validationRules]="borrowerNameValidationRule"></e-column>
+
+    <e-column field="borrower_email" headerText="Borrower Email" width="240" [validationRules]="borrowerEmailValidationRule"> 
+      <ng-template #template let-data>
+        <a [href]="'mailto:' + data.borrower_email" [title]="data.borrower_email">
+          {{ data.borrower_email }}
+        </a>
+      </ng-template>
+    </e-column>
+
+    <e-column field="borrowed_date" headerText="Borrowed Date" width="160" type="date" format="yMd" editType="datepickeredit" textAlign="Right" [filter]="menuFilterSettings" [validationRules]="borrowDateValidationRule">
+      <ng-template #template let-data>
+        <span class="chip chip--outline" [title]="(data.borrowed_date | date:'MM/dd/yyyy')">
+          {{ (data.borrowed_date | date:'MM/dd/yyyy') }}
+        </span>
+      </ng-template>
+    </e-column>
+
+    <e-column field="expected_return_date" headerText="Expected Return Date" width="200" type="date" format="yMd" editType="datepickeredit" textAlign="Right" [filter]="menuFilterSettings" [validationRules]="expectedReturnDateValidationRule">
+      <ng-template #template let-data>
+        <ng-container *ngIf="getDueMeta(data) as due">
+          <span
+            class="chip chip--date"
+            [ngClass]="{
+              'is-returned': due.state === 'returned',
+              'is-overdue':  due.state === 'overdue',
+              'is-due':      due.state === 'due',
+              'is-today':    due.state === 'today',
+              'is-unknown':  due.state === 'unknown'
+            }"
+            [title]="due.label"
+          >
+            {{ due.label }}
+          </span>
+        </ng-container>
+      </ng-template>
+    </e-column>
+
+    <e-column field="actual_return_date" headerText="Actual Return Date" width="190" type="date" editType="datepickeredit" textAlign="Right" [filter]="menuFilterSettings">
+      <ng-template #template let-data>
+        <span *ngIf="data.actual_return_date; else notReturned" class="chip chip--date is-returned" [title]="'Returned ' + (data.actual_return_date | date:'MM/dd/yyyy')">
+          ✔ {{ (data.actual_return_date | date:'MM/dd/yyyy') }}
+        </span>
+        <ng-template #notReturned>
+          <span class="chip chip--date is-unknown">—</span>
+        </ng-template>
+      </ng-template>
+    </e-column>
+
+    <e-column field="lending_status" headerText="Lending Status" width="160" editType="dropdownedit" textAlign="Center" [filter]="checkBoxFilterSettings" [validationRules]="lendingStatusValidationRule">
+      <ng-template #template let-data>
+        <span class="{{ getStatusClass(data.lending_status) }}" [title]="data.lending_status || 'Unknown'">
+          {{ data.lending_status || 'Unknown' }}
+        </span>
+      </ng-template>
+    </e-column>
+
+  </e-columns>
+</ejs-grid>

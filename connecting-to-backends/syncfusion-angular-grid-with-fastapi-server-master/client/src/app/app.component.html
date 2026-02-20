@@ -1,0 +1,44 @@
+<div class="products-grid-wrap">
+  <div class="pg-title">
+    <h2>Products</h2>
+  </div>
+
+  <ejs-grid
+    id="ProductsGrid"
+    [dataSource]="data"
+    [allowPaging]="true"
+    [allowSorting]="true"
+    [allowFiltering]="true"
+    [filterSettings]="filterSettings"
+    [editSettings]="editSettings"
+    [toolbar]="toolbar"
+    [pageSettings]="pageSettings"
+    [enableHover]="true"
+    [rowHeight]="40">
+
+    <e-columns>
+      <e-column field="id" headerText="ID" [isPrimaryKey]="true" textAlign="Right" [width]="90" [visible]="false"></e-column>
+
+      <e-column field="sku" headerText="SKU" [width]="160" [validationRules]="skuRules"></e-column>
+
+      <e-column field="productName" headerText="Product" [width]="240" [validationRules]="productNameRules"></e-column>
+
+      <e-column field="category" headerText="Category" [width]="170" editType="dropdownedit"
+                [filter]="checkboxFilter" [validationRules]="categoryRules"></e-column>
+
+      <e-column field="price" headerText="Price" textAlign="Right" [width]="140" editType="numericedit"
+                format="C2" [validationRules]="priceRules" [filter]="menuFilter"></e-column>
+
+      <e-column field="stock" headerText="Stock" textAlign="Right" [width]="120" editType="numericedit"
+                [validationRules]="stockRules" [filter]="menuFilter"></e-column>
+
+      <e-column field="status" headerText="Status" textAlign="Center" [width]="150" editType="dropdownedit"
+                [filter]="checkboxFilter" [validationRules]="statusRules" [template]="statusTemplate"></e-column>
+    </e-columns>
+
+    <!-- Column template for Status -->
+    <ng-template #statusTemplate let-data>
+      <span [class]="getStatusClass(data?.status)">{{ data?.status || '' }}</span>
+    </ng-template>
+  </ejs-grid>
+</div>

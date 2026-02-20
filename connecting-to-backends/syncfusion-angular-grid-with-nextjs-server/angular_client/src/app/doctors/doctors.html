@@ -1,0 +1,54 @@
+<div style="padding: 20px">
+    <h1>Doctors Portal</h1>
+    <ejs-grid #grid [dataSource]="data" [height]="400" [allowPaging]="true" [allowSorting]="true"
+        [allowFiltering]="true" [filterSettings]="filterSettings" [editSettings]="editSettings" [toolbar]="toolbar"
+        (dataStateChange)="dataStateChange($event)" (dataSourceChanged)="dataSourceChanged($event)">
+        <e-columns>
+            <e-column field="DoctorId" headerText="Doctor ID" width="120" isPrimaryKey="true"
+                [validationRules]="{ required: true }"></e-column>
+            <e-column field="Name" headerText="Name" width="150">
+                <ng-template #template let-data>
+                    <div>
+                        <div class="empimg">
+                            <span *ngIf="data.DoctorImg === 'userMale'" class="e-userimg sf-icon-Male">
+                            </span>
+                            <span *ngIf="data.DoctorImg === 'userFemale'" class="e-userimg sf-icon-FeMale">
+                            </span>
+                        </div>
+                        <span id="Emptext">{{data.Name}}</span>
+                    </div>
+                </ng-template>
+            </e-column>
+            <e-column field="Specialty" headerText="Specialty" width="150" editType="dropdownedit"
+                [edit]="ddparams"></e-column>
+            <e-column field="Email" headerText="Email Address" width="150" [validationRules]="{ email: true }">
+                <ng-template #template let-data>
+                    <div>
+                        <a href="#">
+                            {{data.Email}}
+                        </a>
+                    </div>
+                </ng-template>
+            </e-column>
+            <e-column field="Contact" headerText="Contact Number" width="150"></e-column>
+            <e-column field="Availability" headerText="Availability" width="150" editType="dropdownedit"
+                [edit]="availabilityParams">
+                <ng-template #template let-data>
+                    <div *ngIf="data.Availability === 'Available'; else On_Leave" class="statustemp e-activecolor">
+                        <span class="statustxt e-activecolor">{{data.Availability}}</span>
+                    </div>
+                    <ng-template #On_Leave>
+                        <div class="statustemp e-inactivecolor">
+                            <span class="statustxt e-inactivecolor">{{data.Availability}}</span>
+                        </div>
+                    </ng-template>
+                </ng-template>
+            </e-column>
+            <e-column headerText="Appointments" width="150" [allowEditing]="false">
+                <ng-template #template let-data>
+                    <button ejs-button (click)="btnClick($event)">View Appointments</button>
+                </ng-template>
+            </e-column>
+        </e-columns>
+    </ejs-grid>
+</div>
