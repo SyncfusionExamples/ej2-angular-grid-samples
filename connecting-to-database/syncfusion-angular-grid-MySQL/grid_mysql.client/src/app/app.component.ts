@@ -12,7 +12,7 @@ import {
   FilterService,
   SearchService,
 } from '@syncfusion/ej2-angular-grids';
-import { DataManager, UrlAdaptor, Query } from '@syncfusion/ej2-data';
+import { DataManager } from '@syncfusion/ej2-data';
 import { CustomAdaptor } from './custom-adaptor';
 
 @Component({
@@ -37,6 +37,17 @@ export class AppComponent implements OnInit {
   public toolbar!: ToolbarItems[];
   public dateDefault: Date = new Date();
 
+  public transactionIdRules: any = { required: true, maxLength: 50 };
+  public customerIdRules: any = { required: true, number: true };
+  public orderIdRules: any = { number: true };
+  public invoiceNumberRules: any = { maxLength: 50 };
+  public descriptionRules: any = { maxLength: 500 };
+  public amountRules: any = { required: true, number: true };
+  public currencyCodeRules: any = { maxLength: 10 };
+  public transactionTypeRules: any = { maxLength: 50 };
+  public paymentGatewayRules: any = { maxLength: 100 };
+  public statusRules: any = { maxLength: 50 };
+
   ngOnInit(): void {
     this.dataManager = new DataManager({
       url: 'http://localhost:5283/api/grid/url',
@@ -44,8 +55,7 @@ export class AppComponent implements OnInit {
       updateUrl: 'http://localhost:5283/api/grid/update',
       removeUrl: 'http://localhost:5283/api/grid/remove',
       batchUrl: 'http://localhost:5283/api/grid/batch',
-      adaptor: new UrlAdaptor(),
-      // adaptor: new CustomAdaptor(),
+      adaptor: new CustomAdaptor(),
     });
 
     this.editSettings = {
