@@ -1,0 +1,106 @@
+﻿<ejs-grid
+  #grid
+  [dataSource]="dataManager"
+  [allowSorting]="true"
+  [allowFiltering]="true"
+  [allowPaging]="true"
+  [editSettings]="editSettings"
+  [toolbar]="toolbar"
+>
+  <e-columns>
+    <e-column
+      field="Id"
+      headerText="ID"
+      width="80"
+      [isPrimaryKey]="true"
+      [isPrimaryKey]="true"
+      [allowEditing]="false"
+      textAlign="Right"
+    ></e-column>
+    <e-column
+      field="TransactionId"
+      headerText="Transaction ID"
+      width="160"
+      [validationRules]="{ required: true, maxLength: 50 }"
+    ></e-column>
+    <e-column
+      field="CustomerId"
+      headerText="Customer ID"
+      width="130"
+      textAlign="Right"
+      editType="numericedit"
+      [validationRules]="{ required: true, number: true }"
+    ></e-column>
+    <e-column
+      field="OrderId"
+      headerText="Order ID"
+      width="120"
+      textAlign="Right"
+      editType="numericedit"
+      [validationRules]="{ number: true }"
+    ></e-column>
+    <e-column
+      field="InvoiceNumber"
+      headerText="Invoice #"
+      width="150"
+      [validationRules]="{ maxLength: 50 }"
+    ></e-column>
+    <e-column
+      field="Description"
+      headerText="Description"
+      width="220"
+      [validationRules]="{ maxLength: 500 }"
+    ></e-column>
+    <e-column
+      field="Amount"
+      headerText="Amount"
+      width="130"
+      textAlign="Right"
+      editType="numericedit"
+      format="N2"
+      [validationRules]="{ required: true, number: true }"
+    ></e-column>
+    <e-column
+      field="CurrencyCode"
+      headerText="Currency"
+      width="110"
+      [validationRules]="{ maxLength: 10 }"
+    ></e-column>
+    <e-column
+      field="TransactionType"
+      headerText="Type"
+      width="120"
+      [validationRules]="{ maxLength: 50 }"
+    ></e-column>
+    <e-column
+      field="PaymentGateway"
+      headerText="Gateway"
+      width="140"
+      [validationRules]="{ maxLength: 100 }"
+    ></e-column>
+    <e-column
+      field="CreatedAt"
+      headerText="Created At"
+      type="datetime"
+      format="dd/MM/yyyy HH:mm:ss a"
+      width="190"
+      editType="datetimepickeredit"
+      [defaultValue]="dateDefault"
+    ></e-column>
+    <e-column
+      field="CompletedAt"
+      headerText="Completed At"
+      type="datetime"
+      format="dd/MM/yyyy HH:mm:ss a"
+      width="190"
+      editType="datetimepickeredit"
+    ></e-column>
+    <e-column
+      field="Status"
+      headerText="Status"
+      width="130"
+      [validationRules]="{ maxLength: 50 }"
+      defaultValue="SUCCESS"
+    ></e-column>
+  </e-columns>
+</ejs-grid>
