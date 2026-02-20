@@ -1,0 +1,181 @@
+
+import { ExpenseRecord, ExpenseInput, AvatarEntry } from './types';
+import avatarData from './avatars_base64.json';
+
+const FIRST_NAMES = ['Jane', 'Mark', 'Olivia', 'Ethan', 'Sophia', 'Liam', 'Adam', 'Noah', 'Mia', 'Lucas'];
+const LAST_NAMES = ['Smith', 'Johnson', 'Davis', 'Brown', 'Garcia', 'Miller', 'Wilson', 'Martinez', 'Anderson', 'Clark'];
+
+const DEPARTMENTS = ['Finance', 'HR & People', 'Engineering', 'Marketing', 'Sales', 'Operations'];
+const CATEGORIES = ['Travel & Mileage', 'Meals & Entertainment', 'Office Supplies', 'Training & Education', 'Software & SaaS', 'Lodging'];
+
+const CATEGORY_DESCRIPTIONS: Record<string, string[]> = {
+  'Travel & Mileage': [
+    'Mileage reimbursement for regional client visits',
+    'Cab fare for airport transfer during client onsite',
+    'Fuel expense submitted after sales road trip',
+    'Ride-share to partner meeting downtown'
+  ],
+  'Meals & Entertainment': [
+    'Team lunch with client account executives',
+    'Customer dinner during product demo tour',
+    'Event catering invoice for investor briefing',
+    'Coffee meetup with channel partner'
+  ],
+  'Office Supplies': [
+    'Bulk stationery order for HQ workspace',
+    'Printer ink cartridges for finance pod',
+    'Whiteboard markers and notebooks restock',
+    'Desk accessories purchase for new hires'
+  ],
+  'Training & Education': [
+    'Conference registration fee for leadership summit',
+    'Online course subscription for certifications',
+    'Workshop materials for internal enablement',
+    'Tuition reimbursement for professional development'
+  ],
+  'Software & SaaS': [
+    'Monthly license renewal for analytics suite',
+    'Productivity app subscription for marketing',
+    'Security software upgrade and support',
+    'Design tool seat assignment for creative team'
+  ],
+  'Lodging': [
+    'Hotel stay for cross-country sales visit',
+    'Accommodation invoice for training week',
+    'Business travel lodging near client HQ',
+    'Extended stay for project deployment'
+  ]
+};
+
+const PAYMENT_METHODS = ['Corporate Card', 'Personal Card', 'Bank Transfer', 'Cash Advance'];
+const CURRENCIES = ['USD - US Dollar', 'EUR - Euro', 'GBP - Pound', 'JPY - Yen'];
+const STATUSES: ExpenseRecord['reimbursementStatus'][] = ['Submitted', 'Under Review', 'Approved', 'Paid', 'Rejected'];
+const TAG_OPTIONS = ['Urgent', 'Client-Billable', 'Non-Billable', 'Conference', 'Recurring', 'Capital Expense'];
+
+/* --- Avatars (assumed 70 images) --- */
+const AVATARS = (avatarData as AvatarEntry[]).map(({ Base64Data }) => `data:image/jpeg;base64,${Base64Data}`);
+
+/* --- Helpers --- */
+function pick<T>(list: T[]): T {
+  return list[Math.floor(Math.random() * list.length)];
+}
+function randomTags(): string[] {
+  const shuffled = [...TAG_OPTIONS].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, Math.floor(Math.random() * 3)).sort();
+}
+function randomAmount(): number {
+  const base = Math.random() * 1960 + 40; // 40 - 2000
+  return Number(base.toFixed(2));
+}
+function randomTaxPct(): number {
+  const pct = Math.random() * 0.1 + 0.02; // 2% - 12%
+  return Number(pct.toFixed(4));
+}
+
+/**
+ * Returns start/end UTC dates covering the previous three full months.
+ */
+function getReportingWindow(): { startUtc: Date; endUtc: Date } {
+  const today = new Date();
+  const currentMonth = today.getUTCMonth();
+  const currentYear = today.getUTCFullYear();
+
+  const startMonthIndex = currentMonth - 3;
+  const startDate = new Date(Date.UTC(currentYear, startMonthIndex, 1, 0, 0, 0, 0));
+  const endDate = new Date(Date.UTC(currentYear, currentMonth, 0, 0, 0, 0, 0));
+
+  return { startUtc: startDate, endUtc: endDate };
+}
+
+/**
+ * Picks a random UTC midnight date in the supplied range.
+ */
+function randomDateInRangeUTC(startUtc: Date, endUtc: Date): string {
+  const dayMs = 24 * 60 * 60 * 1000;
+  const totalDays = Math.floor((endUtc.getTime() - startUtc.getTime()) / dayMs);
+  const offsetDays = Math.floor(Math.random() * (totalDays + 1));
+  const result = new Date(startUtc.getTime() + offsetDays * dayMs);
+  return result.toISOString();
+}
+
+/*--- New: Fixed employee roster, 1:1 with AVATARS --- */
+type Employee = {
+  name: string;
+  email: string;
+  avatarUrl: string;
+  department: string;
+};
+
+const EMPLOYEE_COUNT = Math.min(
+  AVATARS.length,
+  FIRST_NAMES.length * LAST_NAMES.length // ensure we can create unique names
+);
+
+/**
+ * Build a deterministic roster of employees:
+ * - Exactly AVATARS.length employees (e.g., 70)
+ * - Each employee gets a unique (first,last) pair, email, department, and avatar
+ * - Department is assigned round-robin for consistency
+ */
+function buildEmployeeRoster(): Employee[] {
+  const roster: Employee[] = [];
+  let idx = 0;
+
+  outer: for (let f = 0; f < FIRST_NAMES.length; f++) {
+    for (let l = 0; l < LAST_NAMES.length; l++) {
+      if (idx >= EMPLOYEE_COUNT) break outer;
+      const first = FIRST_NAMES[f];
+      const last = LAST_NAMES[l];
+      roster.push({
+        name: `${first} ${last}`,
+        email: `${first}.${last}@example.com`.toLowerCase(),
+        avatarUrl: AVATARS[idx],
+        department: DEPARTMENTS[idx % DEPARTMENTS.length]
+      });
+      idx++;
+    }
+  }
+
+  return roster;
+}
+
+export const employees: Employee[] = buildEmployeeRoster();
+
+/**
+ * Generate expenses using ONLY the fixed employees roster.
+ * Each expense row pulls the employee's immutable name/email/avatar/department.
+ */
+function generateExpenses(count = 200): ExpenseRecord[] {
+  const { startUtc, endUtc } = getReportingWindow();
+
+  return Array.from({ length: count }).map((_, idx) => {
+    const employee = pick(employees); // randomly pick among the 70 employees
+    const amount = randomAmount();
+    const taxPct = randomTaxPct();
+    const category = pick(CATEGORIES);
+    const descriptionPool = CATEGORY_DESCRIPTIONS[category] ?? ['Expense submitted'];
+
+    return {
+      expenseId: `EXP${202400 + idx}`,
+      employeeName: employee.name,
+      employeeEmail: employee.email,
+      employeeAvatarUrl: employee.avatarUrl,
+      department: employee.department, // stable per employee
+      category,
+      description: pick(descriptionPool),
+      amount,
+      taxPct,
+      totalAmount: Number((amount * (1 + taxPct)).toFixed(2)),
+      expenseDate: randomDateInRangeUTC(startUtc, endUtc),
+      paymentMethod: pick(PAYMENT_METHODS),
+      currency: pick(CURRENCIES),
+      reimbursementStatus: pick(STATUSES),
+      isPolicyCompliant: Math.random() > 0.2,
+      tags: randomTags()
+    };
+  });
+}
+
+export const expenses: ExpenseRecord[] = generateExpenses(2000);
+
+
