@@ -1,0 +1,22 @@
+﻿<ejs-grid
+  [dataSource]="dataManager"
+  [allowSorting]="true"
+  [allowFiltering]="true"
+  [allowPaging]="true"
+  [pageSettings]="{ pageSize: 10 }"
+  [editSettings]="edit"
+  [toolbar]="toolbar">
+
+  <e-columns>
+    <e-column field="SNo" headerText="S.No" width="70" textAlign="Right"></e-column>
+    <e-column field="TicketId" headerText="ID" width="50" isPrimaryKey="true" isIdentity="true"></e-column>
+    <e-column field="PublicTicketId" headerText="Ticket ID" width="120" textAlign="Right" [validationRules]="{ required: true }"></e-column>
+    <e-column field="Title" headerText="Title" width="150"></e-column>
+    <e-column field="Department" headerText="Department" width="110"></e-column>
+    <e-column field="Assignee" headerText="Assignee" width="150"></e-column>
+    <e-column field="Status" headerText="Status" width="120" [defaultValue]="'Open'" [validationRules]="{ required: true }"></e-column>
+    <e-column field="Priority" headerText="Priority" width="120" [defaultValue]="'Medium'" [validationRules]="{ required: true }"></e-column>
+    <e-column field="CreatedAt" headerText="Created At" editType="datetimepickeredit" type="datetime" width="180" format="dd/MM/yyyy hh:mm:ss a" [validationRules]="{ required: true }"></e-column>
+    <e-column field="UpdatedAt" headerText="Updated At" editType="datetimepickeredit" type="datetime" width="180" format="dd/MM/yyyy hh:mm:ss a" [validationRules]="{ required: true }"></e-column>
+  </e-columns>
+</ejs-grid>
