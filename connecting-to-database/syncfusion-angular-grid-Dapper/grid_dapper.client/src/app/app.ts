@@ -28,7 +28,6 @@ import { CustomAdaptor } from './custom-adaptor';
     SortService,
     FilterService,
     SearchService,
-    SortService,
   ],
 })
 export class AppComponent {
