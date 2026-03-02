@@ -1,0 +1,117 @@
+﻿<div class="container-fluid p-4">
+  <ejs-grid
+    id="grid"
+    width="100%"
+    [height]="500"
+    [dataSource]="dataManager"
+    [allowSorting]="true"
+    [allowFiltering]="true"
+    [allowPaging]="true"
+    [toolbar]="toolbar"
+    [editSettings]="editSettings"
+    [filterSettings]="filterSettings"
+  >
+    <e-columns>
+      <e-column
+        field="Id"
+        headerText="ID"
+        [isIdentity]="true"
+        [visible]="false"
+      ></e-column>
+      <e-column
+        field="ReservationId"
+        headerText="Reservation ID"
+        width="170"
+        [allowEditing]="false"
+        [isPrimaryKey]="true"
+      ></e-column>
+      <e-column
+        field="GuestName"
+        headerText="Guest Name"
+        width="160"
+        [validationRules]="requiredRule"
+      ></e-column>
+      <e-column
+        field="GuestEmail"
+        headerText="Email"
+        width="200"
+        [validationRules]="requiredRule"
+      
+      >   <ng-template #template let-data>
+                    <div>
+                    <a href="mailto:{{data.MailID}}">{{data.GuestEmail}}</a></div>
+                </ng-template></e-column>
+      <e-column
+        field="CheckInDate"
+        headerText="Check-In"
+        width="140"
+        type="date"
+        format="dd-MMM-yyyy"
+        editType="datepickeredit"
+        [validationRules]="requiredRule"
+      ></e-column>
+      <e-column
+        field="CheckOutDate"
+        headerText="Check-Out"
+        width="140"
+        type="date"
+        format="dd-MMM-yyyy"
+        editType="datepickeredit"
+        [validationRules]="requiredRule"
+      ></e-column>
+      <e-column
+        field="RoomType"
+        headerText="Room Type"
+        width="130"
+        editType="dropdownedit"
+        [validationRules]="requiredRule"
+      ></e-column>
+      <e-column
+        field="RoomNumber"
+        headerText="Room Number"
+        width="150"
+        [validationRules]="requiredRule"
+      ></e-column>
+      <e-column
+        field="AmountPerDay"
+        headerText="Amount Per Day"
+        width="170"
+        format="N2"
+        textAlign="Right"
+        editType="numericedit"
+        [validationRules]="requiredRule"
+      ></e-column>
+      <e-column
+        field="NoOfDays"
+        headerText="Number of Days"
+        width="170"
+        textAlign="Right"
+        [validationRules]="requiredRule"
+      ></e-column>
+      <e-column
+        field="TotalAmount"
+        headerText="Total Amount"
+        width="160"
+        format="N2"
+        textAlign="Right"
+        [validationRules]="requiredRule"
+      ></e-column>
+      <e-column
+        field="PaymentStatus"
+        headerText="Payment"
+        width="110"
+        editType="dropdownedit"
+        [validationRules]="requiredRule"
+        template='<span>${PaymentStatus}</span>'
+      ></e-column>
+      <e-column
+        field="ReservationStatus"
+        headerText="Status"
+        width="120"
+        editType="dropdownedit"
+        [validationRules]="requiredRule"
+      ></e-column>
+    </e-columns>
+  </ejs-grid>
+
+</div>
