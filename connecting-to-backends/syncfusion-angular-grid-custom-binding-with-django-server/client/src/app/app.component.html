@@ -1,0 +1,39 @@
+<div class="grid-shell">
+  <ejs-grid
+    [dataSource]="data"
+    [allowPaging]="true"
+    [allowSorting]="true"
+    [allowFiltering]="true"
+    [pageSettings]="pageSettings"
+    [toolbar]="toolbar"
+    [editSettings]="editSettings"
+    [gridLines]="'Both'"
+    [filterSettings]="{ type: 'Excel' }"
+    (dataStateChange)="dataStateChange($event)"
+    (dataSourceChanged)="dataSourceChanged($event)"
+  >
+    <e-columns>
+      <e-column field="record_id" headerText="Record ID" [width]="120" [isPrimaryKey]="true" textAlign="Right"></e-column>
+      <e-column field="isbn_number" headerText="ISBN" [width]="160" [validationRules]="validationRules"></e-column>
+      <e-column field="book_title" headerText="Book Title" [width]="220" [validationRules]="validationRules"></e-column>
+      <e-column field="author_name" headerText="Author" [width]="180" [validationRules]="validationRules"></e-column>
+      <e-column field="genre" headerText="Genre" [width]="140" [validationRules]="validationRules"></e-column>
+      <e-column field="borrower_name" headerText="Borrower" [width]="180" [validationRules]="validationRules"></e-column>
+      <e-column field="borrower_email" headerText="Email" [width]="220" [validationRules]="validationRules"></e-column>
+
+      <e-column field="borrowed_date" headerText="Borrowed Date"
+                [width]="160" type="date" format="yMd" editType="datepickeredit"
+                [validationRules]="validationRules"></e-column>
+
+      <e-column field="expected_return_date" headerText="Expected Return"
+                [width]="170" type="date" format="yMd" editType="datepickeredit"
+                [validationRules]="validationRules"></e-column>
+
+      <e-column field="actual_return_date" headerText="Actual Return"
+                [width]="160" type="date" format="yMd" editType="datepickeredit"></e-column>
+
+      <e-column field="lending_status" headerText="Status" [width]="140"
+                [validationRules]="validationRules" editType="dropdownedit" [edit]="lendingStatusParams"></e-column>
+    </e-columns>
+  </ejs-grid>
+</div>
