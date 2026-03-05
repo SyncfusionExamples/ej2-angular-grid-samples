@@ -1,0 +1,97 @@
+<div class="app-shell">
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-left">
+      <span class="app-title">Employee Management</span>
+      <span class="app-subtitle">Real-Time CRUD · Socket.IO + Syncfusion Grid</span>
+    </div>
+    <div class="status-bar">
+      @if (syncFlash) {
+        <span class="sync-flash">⚡ Clients synced </span>
+      }
+      <span [class]="'conn-badge ' + (connected ? 'connected' : 'disconnected')">
+        <span class="conn-dot"></span>
+        {{ connected ? 'Live' : 'Offline' }}
+      </span>
+      @if (connected) {
+        <span class="client-count">
+          👥 {{ clientCount }} user{{ clientCount !== 1 ? 's' : '' }} online
+        </span>
+      }
+    </div>
+  </header>
+
+  <!-- Info banner -->
+  <div class="info-banner">
+    <span class="info-icon">ℹ️</span>
+    Open this app in <strong>two browser tabs</strong> and make a CRUD
+    change in one, the other tab reflects changes<strong>instantly</strong> via
+    Socket.IO broadcast.
+  </div>
+
+  <!-- Grid -->
+  <div [class]="'grid-wrapper' + (syncFlash ? ' sync-highlight' : '')">
+    <ejs-grid
+      #grid
+      (dataStateChange)="dataStateChange($event)"
+      (dataSourceChanged)="dataSourceChanged($event)"
+      [allowPaging]="true"
+      [allowSorting]="true"
+      [allowMultiSorting]="true"
+      [allowFiltering]="true"
+      [allowResizing]="true"
+      [toolbar]="toolbarItems"
+      [editSettings]="editSettings"
+      [filterSettings]="filterSettings"
+      [pageSettings]="pageSettings"
+    >
+      <e-columns>
+        <e-column
+          field="EmployeeID"
+          headerText="ID"
+          [isPrimaryKey]="true"
+          [isIdentity]="true"
+          textAlign="Right"
+          width="80"
+          [allowEditing]="false"
+        ></e-column>
+        <e-column
+          field="FirstName"
+          headerText="First Name"
+          width="140"
+          [validationRules]="{ required: true }"
+        ></e-column>
+        <e-column
+          field="LastName"
+          headerText="Last Name"
+          width="140"
+          [validationRules]="{ required: true }"
+        ></e-column>
+        <e-column
+          field="Department"
+          headerText="Department"
+          width="160"
+          editType="dropdownedit"
+          [edit]="departmentParams"
+        ></e-column>
+        <e-column
+          field="Salary"
+          headerText="Salary"
+          width="130"
+          textAlign="Right"
+          format="C0"
+          editType="numericedit"
+        ></e-column>
+        <e-column
+          field="IsActive"
+          headerText="Active"
+          width="100"
+          textAlign="Center"
+          [displayAsCheckBox]="true"
+          editType="booleanedit"
+        ></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</div>
+
