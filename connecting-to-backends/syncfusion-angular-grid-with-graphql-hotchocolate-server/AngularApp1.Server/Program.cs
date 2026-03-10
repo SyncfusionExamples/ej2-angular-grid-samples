@@ -5,10 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-// Add CORS for Vite dev server
+// Add CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowVite", policy =>
+    options.AddPolicy("AllowCors", policy =>
     {
         policy.WithOrigins("http://localhost:4200", "https://localhost:5173")
               .AllowAnyHeader()
@@ -46,7 +46,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 // Enable CORS
-app.UseCors("AllowVite");
+app.UseCors("AllowCors");
 
 app.UseAuthorization();
 
