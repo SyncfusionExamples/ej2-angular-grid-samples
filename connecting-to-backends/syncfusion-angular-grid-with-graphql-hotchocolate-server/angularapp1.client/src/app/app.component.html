@@ -1,0 +1,43 @@
+<ejs-grid
+  [dataSource]="data"
+  [height]="500"
+  [toolbar]="toolbar"
+  [allowPaging]="true"
+  [allowSorting]="true"
+  [allowFiltering]="true"
+  [pageSettings]="pageSettings"
+  [editSettings]="editSettings"
+>
+  <e-columns>
+    <e-column
+      field="orderID"
+      headerText="Order ID"
+      width="150"
+      textAlign="Right"
+      isPrimaryKey="true"
+    ></e-column>
+
+    <e-column
+      field="customerID"
+      headerText="Customer ID"
+      width="150"
+      [filter]="checkboxFilter"
+    ></e-column>
+
+    <e-column
+      field="employeeID"
+      headerText="Employee ID"
+      width="150"
+      textAlign="Center"
+    ></e-column>
+
+    <e-column
+      field="shipCountry"
+      headerText="Ship Country"
+      width="150"
+      [filter]="checkboxFilter"
+    ></e-column>
+  </e-columns>
+
+
+</ejs-grid>
