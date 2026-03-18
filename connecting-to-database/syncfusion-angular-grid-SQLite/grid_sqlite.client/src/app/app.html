@@ -1,0 +1,35 @@
+<div>
+  <ejs-grid [dataSource]="dataManager"
+            [allowSorting]="true"
+            [allowFiltering]="true"
+            [allowPaging]="true"
+            [toolbar]="toolbarOptions"
+            [editSettings]="editSettings"
+            [filterSettings]="filterSettings">
+    <e-columns>
+      <e-column field="Id" [isPrimaryKey]="true" [visible]="false"></e-column>
+      <e-column field="AssetID" headerText="Asset ID" width="120" [validationRules]='requiredrules'></e-column>
+      <e-column field="AssetName" headerText="Asset Name" width="180" textAlign="Left"
+                [validationRules]='requiredrules'></e-column>
+      <e-column field="AssetType" headerText="Type" width="130" textAlign="Left"
+                [validationRules]='requiredrules'></e-column>
+      <e-column field="Model" headerText="Model" width="150" textAlign="Left"
+                [validationRules]='requiredrules'></e-column>
+      <e-column field="SerialNumber" headerText="Serial Number" width="160" [validationRules]='requiredrules'></e-column>
+      <e-column field="InvoiceID" headerText="Invoice ID" width="130" textAlign="Left" [validationRules]='requiredrules'></e-column>
+      <e-column field="AssignedTo" headerText="Assigned To" width="150" textAlign="Left" [validationRules]='requiredrules'></e-column>
+      <e-column field="Department" headerText="Department" width="130" textAlign="Left" editType="dropdownedit" [validationRules]='requiredrules'></e-column>
+      <e-column field="PurchaseDate" headerText="Purchase Date" width="140" textAlign="Center"
+                type="date" format="yyyy-MM-dd" editType="datepickeredit"
+                [validationRules]='requiredrules'></e-column>
+      <e-column field="PurchaseCost" headerText="Cost" width="120" textAlign="Right"
+                format="C0" editType="numericedit"></e-column>
+      <e-column field="WarrantyExpiry" headerText="Warranty Expiry" width="150" textAlign="Center"
+                type="date" format="yyyy-MM-dd" editType="datepickeredit" [validationRules]='requiredrules'></e-column>
+      <e-column field="Condition" headerText="Condition" width="120" textAlign="Center" editType="dropdownedit" [validationRules]='requiredrules'> <ng-template #template let-data> <div [ngSwitch]="data.Condition" class="statustemp"> <span *ngSwitchCase="'New'" class="badge bg-success">{{ data.Condition }}</span> <span *ngSwitchCase="'Good'" class="badge bg-primary">{{ data.Condition }}</span> <span *ngSwitchCase="'Fair'" class="badge bg-warning">{{ data.Condition }}</span> <span *ngSwitchCase="'Poor'" class="badge bg-danger">{{ data.Condition }}</span> <span *ngSwitchDefault class="badge bg-secondary">{{ data.Condition }}</span> </div> </ng-template> </e-column>
+      <e-column field="LastMaintenance" headerText="Last Maintenance" width="150" textAlign="Center"
+                type="date" format="yyyy-MM-dd" editType="datepickeredit" [validationRules]='requiredrules'></e-column>
+      <e-column field="Status" headerText="Status" width="150" textAlign="Center" editType="dropdownedit" [validationRules]='requiredrules'> <ng-template #template let-data> <div [ngSwitch]="data.Status" class="statustemp"> <span *ngSwitchCase="'Active'" class="badge bg-success">{{ data.Status }}</span> <span *ngSwitchCase="'In Repair'" class="badge bg-warning">{{ data.Status }}</span> <span *ngSwitchCase="'Retired'" class="badge bg-secondary">{{ data.Status }}</span> <span *ngSwitchCase="'Available'" class="badge bg-info">{{ data.Status }}</span> <span *ngSwitchDefault class="badge bg-secondary">{{ data.Status }}</span> </div> </ng-template> </e-column>
+    </e-columns>
+  </ejs-grid>
+</div>
