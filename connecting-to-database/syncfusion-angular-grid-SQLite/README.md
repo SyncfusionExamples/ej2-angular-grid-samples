@@ -1,7 +1,3 @@
-# ej2-angular-grid-samples
-
-This repository contains categorized samples for the Syncfusion EJ2 Angular Grid, demonstrating real-world use cases including connecting to databases, integrating with various backends, and common reusable configurations
-
 ## Steps to download GitHub samples using DownGit
 
 1. **Open the DownGit Website**
@@ -11,7 +7,7 @@ This repository contains categorized samples for the Syncfusion EJ2 Angular Grid
 2. **Copy the GitHub URL**
 
     - Navigate to the sample folder you want to download and copy its URL.
-    - Example : https://github.com/SyncfusionExamples/ej2-angular-grid-samples/tree/1011064-EditReadMeFile/connecting-to-backends/syncfusion-angular-grid-with-django-server
+    - Example : https://github.com/SyncfusionExamples/ej2-angular-grid-samples/tree/master/connecting-to-database/syncfusion-angular-grid-SQLite
 
 3. **Paste the URL into DownGit**  
 
@@ -21,8 +17,7 @@ This repository contains categorized samples for the Syncfusion EJ2 Angular Grid
 
     - Click **Download**.
     - DownGit will generate a ZIP file of the selected folder, which you can save and extract locally.
+
 5. **Reference** 
     
     For more details or to explore the project, visit the official [DownGit GitHub repository](https://github.com/MinhasKamal/DownGit).
-
-
