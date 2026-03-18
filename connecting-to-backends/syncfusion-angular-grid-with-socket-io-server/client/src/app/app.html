@@ -48,29 +48,35 @@
       <e-columns>
         <e-column
           field="EmployeeID"
-          headerText="ID"
+          headerText="Employee ID"
           [isPrimaryKey]="true"
           [isIdentity]="true"
           textAlign="Right"
-          width="80"
+          width="120"
           [allowEditing]="false"
         ></e-column>
         <e-column
-          field="FirstName"
-          headerText="First Name"
-          width="140"
+          field="EmployeeName"
+          headerText="Employee Name"
+          width="160"
           [validationRules]="{ required: true }"
         ></e-column>
         <e-column
-          field="LastName"
-          headerText="Last Name"
+          field="Email"
+          headerText="Email"
+          width="200"
+          [validationRules]="{ required: true, email: true }"
+        ></e-column>
+        <e-column
+          field="Contact"
+          headerText="Contact"
           width="140"
-          [validationRules]="{ required: true }"
+          textAlign="Right"
         ></e-column>
         <e-column
           field="Department"
           headerText="Department"
-          width="160"
+          width="140"
           editType="dropdownedit"
           [edit]="departmentParams"
         ></e-column>
@@ -83,12 +89,20 @@
           editType="numericedit"
         ></e-column>
         <e-column
-          field="IsActive"
-          headerText="Active"
-          width="100"
-          textAlign="Center"
-          [displayAsCheckBox]="true"
-          editType="booleanedit"
+          field="JoinedDate"
+          headerText="Joined Date"
+          width="140"
+          type="date"
+          textAlign="Right"
+          format="yMd"
+          editType="datepickeredit"
+        ></e-column>
+        <e-column
+          field="Location"
+          headerText="Location"
+          width="140"
+          editType="dropdownedit"
+          [edit]="locationParams"
         ></e-column>
       </e-columns>
     </ejs-grid>
