@@ -1,17 +1,17 @@
 ﻿<ejs-grid #grid [dataSource]="dataManager" [allowSorting]="true" [allowFiltering]="true" [allowPaging]="true" [editSettings]="editSettings" [toolbar]="toolbar" [filterSettings]="filterSettings">
   <e-columns>
-    <e-column field="Id" headerText="ID" width="80" [isPrimaryKey]="true" [allowEditing]="false" textAlign="Right"></e-column>
+    <e-column field="Id" headerText="ID" width="80" [isPrimaryKey]="true" [allowEditing]="false" textAlign="Right" [visible]="false"></e-column>
     <e-column field="TransactionId" headerText="Transaction ID" width="160" [validationRules]="transactionIdRules"></e-column>
-    <e-column field="CustomerId" headerText="Customer ID" width="130" textAlign="Right" editType="numericedit" [validationRules]="customerIdRules"></e-column>
+    <e-column field="CustomerId" headerText="Customer ID" width="140" textAlign="Right" editType="numericedit" [validationRules]="customerIdRules"></e-column>
     <e-column field="OrderId" headerText="Order ID" width="120" textAlign="Right" editType="numericedit" [validationRules]="orderIdRules"></e-column>
-    <e-column field="InvoiceNumber" headerText="Invoice #" width="150" [validationRules]="invoiceNumberRules"></e-column>
+    <e-column field="InvoiceNumber" headerText="Invoice Number" width="160" [validationRules]="invoiceNumberRules"></e-column>
     <e-column field="Description" headerText="Description" width="220" [validationRules]="descriptionRules"></e-column>
-    <e-column field="Amount" headerText="Amount" width="130" textAlign="Right" editType="numericedit" format="N2" [validationRules]="amountRules"></e-column>
+    <e-column field="Amount" headerText="Amount" width="130" textAlign="Right" editType="numericedit" [valueAccessor]='amountValueAccessor' [validationRules]="amountRules"></e-column>
     <e-column field="CurrencyCode" headerText="Currency" width="110" [validationRules]="currencyCodeRules"></e-column>
-    <e-column field="TransactionType" headerText="Type" width="120" [validationRules]="transactionTypeRules"></e-column>
-    <e-column field="PaymentGateway" headerText="Gateway" width="140" [validationRules]="paymentGatewayRules"></e-column>
-    <e-column field="CreatedAt" headerText="Created At" type="datetime" format="dd/MM/yyyy HH:mm:ss a" width="190" editType="datetimepickeredit" [defaultValue]="dateDefault"></e-column>
-    <e-column field="CompletedAt" headerText="Completed At" type="datetime" format="dd/MM/yyyy HH:mm:ss a" width="190" editType="datetimepickeredit"></e-column>
-    <e-column field="Status" headerText="Status" width="130" [validationRules]="statusRules" defaultValue="SUCCESS"></e-column>
+    <e-column field="TransactionType" headerText="Type" width="120" [validationRules]="transactionTypeRules" editType="dropdownedit"></e-column>
+    <e-column field="PaymentGateway" headerText="Payment Gateway" width="180" [validationRules]="paymentGatewayRules" editType="dropdownedit"></e-column>
+    <e-column field="CreatedAt" headerText="Created At" type="datetime" format="dd/MM/yyyy HH:mm:ss a" width="190" editType="datetimepickeredit" [defaultValue]="dateDefault" textAlign="Right" ></e-column>
+    <e-column field="CompletedAt" headerText="Completed At" type="datetime" format="dd/MM/yyyy HH:mm:ss a" width="190" editType="datetimepickeredit" textAlign="Right" ></e-column>
+    <e-column field="Status" headerText="Status" width="130" [validationRules]="statusRules" defaultValue="SUCCESS" editType="dropdownedit"></e-column>
   </e-columns>
 </ejs-grid>

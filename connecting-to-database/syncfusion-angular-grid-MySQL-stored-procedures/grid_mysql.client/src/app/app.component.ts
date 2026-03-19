@@ -2,10 +2,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   GridComponent, GridModule, EditSettingsModel, FilterSettingsModel, ToolbarItems,
-  EditService, ToolbarService, PageService, SortService, FilterService, SearchService
+  EditService, ToolbarService, PageService, SortService, FilterService, SearchService,
+  ValueAccessor
 } from '@syncfusion/ej2-angular-grids';
-import { DataManager } from '@syncfusion/ej2-data';
-import { CustomAdaptor } from './custom-adaptor';
+import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
 @Component({
   selector: 'app-root',
@@ -40,8 +40,8 @@ export class AppComponent implements OnInit {
       insertUrl: 'http://localhost:5283/api/grid/insert',
       updateUrl: 'http://localhost:5283/api/grid/update',
       removeUrl: 'http://localhost:5283/api/grid/remove',
-      batchUrl: 'http://localhost:5283/api/grid/batch',
-      adaptor: new CustomAdaptor(),
+      // batchUrl: 'http://localhost:5283/api/grid/batch',
+      adaptor: new UrlAdaptor(),
     });
 
     this.editSettings = {
@@ -53,4 +53,14 @@ export class AppComponent implements OnInit {
     this.toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
     this.filterSettings = { type: 'Excel' }
   }
+  amountValueAccessor: ValueAccessor = (field: string, data: any, column: any,) => {
+    const currencySymbols: Record<string, string> = {
+      INR: "₹",
+      USD: "$",
+      EUR: "€",
+      GBP: "£",
+    };
+    const symbol = currencySymbols[data.CurrencyCode] || "";
+    return `${symbol}${data.Amount?.toFixed(2)}`;
+  };
 }
