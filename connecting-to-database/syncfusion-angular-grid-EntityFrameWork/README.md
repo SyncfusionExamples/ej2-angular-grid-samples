@@ -2,7 +2,7 @@
 
 1. **Open the DownGit Website**
 
-    Go to the official DownGit tool: https://minhaskamal.github.io/DownGit
+    Go to the official DownGit tool: https://downgit.github.io/#/home
 
 2. **Copy the GitHub URL**
 
