@@ -7,7 +7,7 @@
 2. **Copy the GitHub URL**
 
     - Navigate to the sample folder you want to download and copy its URL.
-    - Example : https://github.com/SyncfusionExamples/ej2-angular-grid-samples/tree/1011064-EditReadMeFile/connecting-to-database/syncfusion-angular-grid-MSSQL
+    - Example : https://github.com/SyncfusionExamples/ej2-angular-grid-samples/tree/master/connecting-to-database/syncfusion-angular-grid-MSSQL
 
 3. **Paste the URL into DownGit**  
 

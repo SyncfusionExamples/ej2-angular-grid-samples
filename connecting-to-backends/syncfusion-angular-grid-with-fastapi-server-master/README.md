@@ -108,7 +108,7 @@ The Syncfusion Angular Grid communicates with the backend using the **DataManage
 2. **Copy the GitHub URL**
 
     - Navigate to the sample folder you want to download and copy its URL.
-    - Example : https://github.com/SyncfusionExamples/ej2-angular-grid-samples/tree/1011064-EditReadMeFile/connecting-to-backends/syncfusion-angular-grid-with-fastapi-server-master
+    - Example : https://github.com/SyncfusionExamples/ej2-angular-grid-samples/tree/master/connecting-to-backends/syncfusion-angular-grid-with-fastapi-server-master
 
 3. **Paste the URL into DownGit**  
 

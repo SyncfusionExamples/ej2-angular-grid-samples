@@ -108,7 +108,7 @@ For detailed information, refer to the [Syncfusion Angular Grid documentation](h
 2. **Copy the GitHub URL**
 
     - Navigate to the sample folder you want to download and copy its URL.
-    - Example : https://github.com/SyncfusionExamples/ej2-angular-grid-samples/tree/1011064-EditReadMeFile/connecting-to-backends/syncfusion-angular-grid-with-expressjs-server
+    - Example : https://github.com/SyncfusionExamples/ej2-angular-grid-samples/tree/master/connecting-to-backends/syncfusion-angular-grid-with-expressjs-server
 
 3. **Paste the URL into DownGit**  
 
