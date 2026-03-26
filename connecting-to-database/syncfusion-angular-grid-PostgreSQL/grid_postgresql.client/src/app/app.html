@@ -1,0 +1,50 @@
+<ejs-grid [dataSource]="dataManager" [allowPaging]="true" [allowSorting]="true" [allowFiltering]="true"
+  [toolbar]="toolbarOptions" [filterSettings]="filterSettings" [editSettings]="editSettings">
+  <e-columns>
+    <e-column field="PurchaseOrderId" headerText="ID" width="80" isPrimaryKey="true" textAlign="Right"
+      type="number"></e-column>
+    <e-column field="PoNumber" headerText="PO Number" width="150" [validationRules]="requiredrules"></e-column>
+    <e-column field="VendorID" headerText="Vendor ID" width="150" [validationRules]="requiredrules"></e-column>
+    <e-column field="ItemName" headerText="Item Name" width="150" editType="dropdownedit"
+      [validationRules]="requiredrules"></e-column>
+    <e-column field="ItemCategory" headerText="Category" width="120" editType="dropdownedit"
+      [validationRules]="requiredrules"></e-column>
+    <e-column field="Quantity" headerText="Quantity" width="110" textAlign="Right" type="number" editType="numericedit"
+      [validationRules]="requiredrules">
+    </e-column>
+    <e-column field="UnitPrice" headerText="Unit Price" width="130" textAlign="Right" type="number"
+      editType="numericedit" [validationRules]="requiredrules" [template]="priceTemplateRef">
+    </e-column>
+    <ng-template #priceTemplateRef let-data>
+      <span>₹{{ data.UnitPrice?.toFixed(2) }}</span>
+    </ng-template>
+    <e-column field="TotalAmount" headerText="Total Amount" width="150" textAlign="Right" type="number"
+      allowEditing="false">
+    </e-column>
+    <e-column field="Status" headerText="Status" width="110" editType="dropdownedit" [validationRules]="requiredrules"
+      [template]="statusTemplateRef">
+    </e-column>
+    <ng-template #statusTemplateRef let-data>
+      <span [style.color]="data.Status === 'Approved' ? 'green' : 'red'">
+        {{ data.Status }}
+      </span>
+    </ng-template>
+    <e-column field="ApprovedBy" headerText="Approved By" width="150" textAlign="Right"
+      [validationRules]="requiredrules" [template]="approvedByTemplateRef">
+    </e-column>
+    <ng-template #approvedByTemplateRef let-data>
+      <span style="font-style: italic;">
+        {{ data.ApprovedBy || 'Pending' }}
+      </span>
+    </ng-template>
+    <e-column field="OrderedBy" headerText="Ordered By" width="150" [validationRules]="requiredrules"></e-column>
+    <e-column field="OrderDate" headerText="Order Date" width="150" type="date" format="yMd" editType="datepickeredit"
+      textAlign="Right" [validationRules]="requiredrules"></e-column>
+    <e-column field="ExpectedDeliveryDate" headerText="Expected Delivery" width="170" type="date" format="yMd"
+      editType="datepickeredit" [validationRules]="requiredrules" textAlign="Right"></e-column>
+    <e-column field="CreatedOn" headerText="Created At" width="150" type="datetime" format="yMd HH:mm"
+      editType="datepickeredit" textAlign="Right" [validationRules]="requiredrules"></e-column>
+    <e-column field="UpdatedOn" headerText="Updated At" width="150" type="datetime" format="yMd HH:mm"
+      editType="datepickeredit" textAlign="Right" [validationRules]="requiredrules"></e-column>
+  </e-columns>
+</ejs-grid>
