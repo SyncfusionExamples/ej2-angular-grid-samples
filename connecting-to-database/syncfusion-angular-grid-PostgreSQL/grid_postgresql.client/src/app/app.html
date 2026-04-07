@@ -29,20 +29,13 @@
         {{ data.Status }}
       </span>
     </ng-template>
-    <e-column field="ApprovedBy" headerText="Approved By" width="150" textAlign="Right"
+    <e-column field="ApprovedBy" headerText="Approved By" width="150" 
       [validationRules]="requiredrules" [template]="approvedByTemplateRef">
     </e-column>
-    <ng-template #approvedByTemplateRef let-data>
-      <span style="font-style: italic;">
-        {{ data.ApprovedBy || 'Pending' }}
-      </span>
-    </ng-template>
     <e-column field="OrderedBy" headerText="Ordered By" width="150" [validationRules]="requiredrules"></e-column>
     <e-column field="OrderDate" headerText="Order Date" width="150" type="date" format="yMd" editType="datepickeredit"
       textAlign="Right" [validationRules]="requiredrules"></e-column>
     <e-column field="ExpectedDeliveryDate" headerText="Expected Delivery" width="170" type="date" format="yMd"
       editType="datepickeredit" [validationRules]="requiredrules" textAlign="Right"></e-column>
-    <e-column field="CreatedOn" headerText="Created At" width="150" type="datetime" format="yMd HH:mm" textAlign="Right" [allowEditing]='false'></e-column>
-    <e-column field="UpdatedOn" headerText="Updated At" width="150" type="datetime" format="yMd HH:mm" textAlign="Right" [allowEditing]='false'></e-column>
   </e-columns>
 </ejs-grid>
