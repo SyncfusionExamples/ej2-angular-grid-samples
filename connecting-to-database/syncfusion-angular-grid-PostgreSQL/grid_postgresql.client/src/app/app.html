@@ -19,7 +19,7 @@
       <span>₹{{ data.UnitPrice?.toFixed(2) }}</span>
     </ng-template>
     <e-column field="TotalAmount" headerText="Total Amount" width="150" textAlign="Right" type="number"
-      allowEditing="false">
+      [allowEditing]='false'>
     </e-column>
     <e-column field="Status" headerText="Status" width="110" editType="dropdownedit" [validationRules]="requiredrules"
       [template]="statusTemplateRef">
@@ -42,9 +42,7 @@
       textAlign="Right" [validationRules]="requiredrules"></e-column>
     <e-column field="ExpectedDeliveryDate" headerText="Expected Delivery" width="170" type="date" format="yMd"
       editType="datepickeredit" [validationRules]="requiredrules" textAlign="Right"></e-column>
-    <e-column field="CreatedOn" headerText="Created At" width="150" type="datetime" format="yMd HH:mm"
-      editType="datepickeredit" textAlign="Right" [validationRules]="requiredrules"></e-column>
-    <e-column field="UpdatedOn" headerText="Updated At" width="150" type="datetime" format="yMd HH:mm"
-      editType="datepickeredit" textAlign="Right" [validationRules]="requiredrules"></e-column>
+    <e-column field="CreatedOn" headerText="Created At" width="150" type="datetime" format="yMd HH:mm" textAlign="Right" [allowEditing]='false'></e-column>
+    <e-column field="UpdatedOn" headerText="Updated At" width="150" type="datetime" format="yMd HH:mm" textAlign="Right" [allowEditing]='false'></e-column>
   </e-columns>
 </ejs-grid>

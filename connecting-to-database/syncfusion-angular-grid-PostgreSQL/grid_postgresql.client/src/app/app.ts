@@ -31,7 +31,7 @@ export class AppComponent {
     this.filterSettings = { type: 'Excel' };
 
     this.dataManager = new DataManager({
-      url: 'https://localhost:7102/api/PurchaseOrder/url',
+      url: 'https://localhost:7102/api/PurchaseOrder/getpurchasedata',
       insertUrl: 'https://localhost:7102/api/PurchaseOrder/insert',
       updateUrl: 'https://localhost:7102/api/PurchaseOrder/update',
       removeUrl: 'https://localhost:7102/api/PurchaseOrder/remove',
