@@ -128,6 +128,7 @@ namespace Grid_PostgreSQL.Server.Controllers
                 {
                     purchaseOrder.PurchaseOrderId = 0;
                     purchaseOrder.TotalAmount = purchaseOrder.Quantity * purchaseOrder.UnitPrice;
+                    purchaseOrder.CreatedOn = DateTime.UtcNow;
                     purchaseOrder.UpdatedOn = DateTime.UtcNow;
                     _dbContext.PurchaseOrders.Add(purchaseOrder);
                 }
