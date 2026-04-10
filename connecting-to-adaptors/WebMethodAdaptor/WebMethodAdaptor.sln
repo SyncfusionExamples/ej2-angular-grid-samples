@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMethodAdaptor.Server", "WebMethodAdaptor.Server\WebMethodAdaptor.Server.csproj", "{16548FB4-9C92-4454-BB72-6DEC3893611F}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "webmethodadaptor.client", "webmethodadaptor.client\webmethodadaptor.client.esproj", "{59CA321A-EE33-4BCB-944E-009927FB3B12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16548FB4-9C92-4454-BB72-6DEC3893611F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16548FB4-9C92-4454-BB72-6DEC3893611F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16548FB4-9C92-4454-BB72-6DEC3893611F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16548FB4-9C92-4454-BB72-6DEC3893611F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59CA321A-EE33-4BCB-944E-009927FB3B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59CA321A-EE33-4BCB-944E-009927FB3B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59CA321A-EE33-4BCB-944E-009927FB3B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59CA321A-EE33-4BCB-944E-009927FB3B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59CA321A-EE33-4BCB-944E-009927FB3B12}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F87F9904-CFF2-4D94-BD04-9139269A053B}
+	EndGlobalSection
+EndGlobal

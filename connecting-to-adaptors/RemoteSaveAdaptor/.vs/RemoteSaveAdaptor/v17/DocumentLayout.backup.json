@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Binding-data-from-remote-service-to-angular-data-grid-master (1)\\Binding-data-from-remote-service-to-angular-data-grid-master\\RemoteSaveAdaptor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{03248ABA-27D2-470C-9FE2-6AF2F2F56A96}|RemoteSaveAdaptor.Server\\RemoteSaveAdaptor.Server.csproj|d:\\binding-data-from-remote-service-to-angular-data-grid-master (1)\\binding-data-from-remote-service-to-angular-data-grid-master\\remotesaveadaptor\\remotesaveadaptor.server\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03248ABA-27D2-470C-9FE2-6AF2F2F56A96}|RemoteSaveAdaptor.Server\\RemoteSaveAdaptor.Server.csproj|solutionrelative:remotesaveadaptor.server\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F593DC32-452A-4342-9CBB-7C336F34F494}|remotesaveadaptor.client\\remotesaveadaptor.client.esproj|d:\\binding-data-from-remote-service-to-angular-data-grid-master (1)\\binding-data-from-remote-service-to-angular-data-grid-master\\remotesaveadaptor\\remotesaveadaptor.client\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{F593DC32-452A-4342-9CBB-7C336F34F494}|remotesaveadaptor.client\\remotesaveadaptor.client.esproj|solutionrelative:remotesaveadaptor.client\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F593DC32-452A-4342-9CBB-7C336F34F494}|remotesaveadaptor.client\\remotesaveadaptor.client.esproj|d:\\binding-data-from-remote-service-to-angular-data-grid-master (1)\\binding-data-from-remote-service-to-angular-data-grid-master\\remotesaveadaptor\\remotesaveadaptor.client\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{F593DC32-452A-4342-9CBB-7C336F34F494}|remotesaveadaptor.client\\remotesaveadaptor.client.esproj|solutionrelative:remotesaveadaptor.client\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F593DC32-452A-4342-9CBB-7C336F34F494}|remotesaveadaptor.client\\remotesaveadaptor.client.esproj|d:\\binding-data-from-remote-service-to-angular-data-grid-master (1)\\binding-data-from-remote-service-to-angular-data-grid-master\\remotesaveadaptor\\remotesaveadaptor.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F593DC32-452A-4342-9CBB-7C336F34F494}|remotesaveadaptor.client\\remotesaveadaptor.client.esproj|solutionrelative:remotesaveadaptor.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F593DC32-452A-4342-9CBB-7C336F34F494}|remotesaveadaptor.client\\remotesaveadaptor.client.esproj|d:\\binding-data-from-remote-service-to-angular-data-grid-master (1)\\binding-data-from-remote-service-to-angular-data-grid-master\\remotesaveadaptor\\remotesaveadaptor.client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F593DC32-452A-4342-9CBB-7C336F34F494}|remotesaveadaptor.client\\remotesaveadaptor.client.esproj|solutionrelative:remotesaveadaptor.client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F593DC32-452A-4342-9CBB-7C336F34F494}|remotesaveadaptor.client\\remotesaveadaptor.client.esproj|d:\\binding-data-from-remote-service-to-angular-data-grid-master (1)\\binding-data-from-remote-service-to-angular-data-grid-master\\remotesaveadaptor\\remotesaveadaptor.client\\remotesaveadaptor.client.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F593DC32-452A-4342-9CBB-7C336F34F494}|remotesaveadaptor.client\\remotesaveadaptor.client.esproj|solutionrelative:remotesaveadaptor.client\\remotesaveadaptor.client.esproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "D:\\Binding-data-from-remote-service-to-angular-data-grid-master (1)\\Binding-data-from-remote-service-to-angular-data-grid-master\\RemoteSaveAdaptor\\RemoteSaveAdaptor.Server\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "RemoteSaveAdaptor.Server\\Controllers\\OrdersController.cs",
+              "ToolTip": "D:\\Binding-data-from-remote-service-to-angular-data-grid-master (1)\\Binding-data-from-remote-service-to-angular-data-grid-master\\RemoteSaveAdaptor\\RemoteSaveAdaptor.Server\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "RemoteSaveAdaptor.Server\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAA0wF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T13:08:37.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "app.module.ts",
+              "DocumentMoniker": "D:\\Binding-data-from-remote-service-to-angular-data-grid-master (1)\\Binding-data-from-remote-service-to-angular-data-grid-master\\RemoteSaveAdaptor\\remotesaveadaptor.client\\src\\app\\app.module.ts",
+              "RelativeDocumentMoniker": "remotesaveadaptor.client\\src\\app\\app.module.ts",
+              "ToolTip": "D:\\Binding-data-from-remote-service-to-angular-data-grid-master (1)\\Binding-data-from-remote-service-to-angular-data-grid-master\\RemoteSaveAdaptor\\remotesaveadaptor.client\\src\\app\\app.module.ts",
+              "RelativeToolTip": "remotesaveadaptor.client\\src\\app\\app.module.ts",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-09T12:50:49.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "app.component.html",
+              "DocumentMoniker": "D:\\Binding-data-from-remote-service-to-angular-data-grid-master (1)\\Binding-data-from-remote-service-to-angular-data-grid-master\\RemoteSaveAdaptor\\remotesaveadaptor.client\\src\\app\\app.component.html",
+              "RelativeDocumentMoniker": "remotesaveadaptor.client\\src\\app\\app.component.html",
+              "ToolTip": "D:\\Binding-data-from-remote-service-to-angular-data-grid-master (1)\\Binding-data-from-remote-service-to-angular-data-grid-master\\RemoteSaveAdaptor\\remotesaveadaptor.client\\src\\app\\app.component.html",
+              "RelativeToolTip": "remotesaveadaptor.client\\src\\app\\app.component.html",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-09T12:50:41.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "app.component.ts",
+              "DocumentMoniker": "D:\\Binding-data-from-remote-service-to-angular-data-grid-master (1)\\Binding-data-from-remote-service-to-angular-data-grid-master\\RemoteSaveAdaptor\\remotesaveadaptor.client\\src\\app\\app.component.ts",
+              "RelativeDocumentMoniker": "remotesaveadaptor.client\\src\\app\\app.component.ts",
+              "ToolTip": "D:\\Binding-data-from-remote-service-to-angular-data-grid-master (1)\\Binding-data-from-remote-service-to-angular-data-grid-master\\RemoteSaveAdaptor\\remotesaveadaptor.client\\src\\app\\app.component.ts",
+              "RelativeToolTip": "remotesaveadaptor.client\\src\\app\\app.component.ts",
+              "ViewState": "AgIAACYAAAAAAAAAAAAUwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-09T12:50:25.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "package.json",
+              "DocumentMoniker": "D:\\Binding-data-from-remote-service-to-angular-data-grid-master (1)\\Binding-data-from-remote-service-to-angular-data-grid-master\\RemoteSaveAdaptor\\remotesaveadaptor.client\\package.json",
+              "RelativeDocumentMoniker": "remotesaveadaptor.client\\package.json",
+              "ToolTip": "D:\\Binding-data-from-remote-service-to-angular-data-grid-master (1)\\Binding-data-from-remote-service-to-angular-data-grid-master\\RemoteSaveAdaptor\\remotesaveadaptor.client\\package.json",
+              "RelativeToolTip": "remotesaveadaptor.client\\package.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-09T12:47:43.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "remotesaveadaptor.client",
+              "DocumentMoniker": "D:\\Binding-data-from-remote-service-to-angular-data-grid-master (1)\\Binding-data-from-remote-service-to-angular-data-grid-master\\RemoteSaveAdaptor\\remotesaveadaptor.client\\remotesaveadaptor.client.esproj",
+              "RelativeDocumentMoniker": "remotesaveadaptor.client\\remotesaveadaptor.client.esproj",
+              "ToolTip": "D:\\Binding-data-from-remote-service-to-angular-data-grid-master (1)\\Binding-data-from-remote-service-to-angular-data-grid-master\\RemoteSaveAdaptor\\remotesaveadaptor.client\\remotesaveadaptor.client.esproj",
+              "RelativeToolTip": "remotesaveadaptor.client\\remotesaveadaptor.client.esproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-09T12:47:38.284Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
