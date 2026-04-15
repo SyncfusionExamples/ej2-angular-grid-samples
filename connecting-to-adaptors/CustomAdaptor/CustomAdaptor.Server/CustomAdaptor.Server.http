@@ -1,0 +1,6 @@
+@CustomAdaptor.Server_HostAddress = http://localhost:5124
+
+GET {{CustomAdaptor.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{53EB913B-2392-4C21-9DF3-E8D9DD912A99}|ODataV4Adaptor.Server\\ODataV4Adaptor.Server.csproj|d:\\ej2\\samples\\angular\\adaptors\\odatav4adaptor\\odatav4adaptor.server\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53EB913B-2392-4C21-9DF3-E8D9DD912A99}|ODataV4Adaptor.Server\\ODataV4Adaptor.Server.csproj|solutionrelative:odatav4adaptor.server\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D2410F3-9EA0-4D25-8DF0-058BFAD0F839}|odatav4adaptor.client\\odatav4adaptor.client.esproj|d:\\ej2\\samples\\angular\\adaptors\\odatav4adaptor\\odatav4adaptor.client\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3D2410F3-9EA0-4D25-8DF0-058BFAD0F839}|odatav4adaptor.client\\odatav4adaptor.client.esproj|solutionrelative:odatav4adaptor.client\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D2410F3-9EA0-4D25-8DF0-058BFAD0F839}|odatav4adaptor.client\\odatav4adaptor.client.esproj|d:\\ej2\\samples\\angular\\adaptors\\odatav4adaptor\\odatav4adaptor.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3D2410F3-9EA0-4D25-8DF0-058BFAD0F839}|odatav4adaptor.client\\odatav4adaptor.client.esproj|solutionrelative:odatav4adaptor.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D2410F3-9EA0-4D25-8DF0-058BFAD0F839}|odatav4adaptor.client\\odatav4adaptor.client.esproj|d:\\ej2\\samples\\angular\\adaptors\\odatav4adaptor\\odatav4adaptor.client\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3D2410F3-9EA0-4D25-8DF0-058BFAD0F839}|odatav4adaptor.client\\odatav4adaptor.client.esproj|solutionrelative:odatav4adaptor.client\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53EB913B-2392-4C21-9DF3-E8D9DD912A99}|ODataV4Adaptor.Server\\ODataV4Adaptor.Server.csproj|d:\\ej2\\samples\\angular\\adaptors\\odatav4adaptor\\odatav4adaptor.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53EB913B-2392-4C21-9DF3-E8D9DD912A99}|ODataV4Adaptor.Server\\ODataV4Adaptor.Server.csproj|solutionrelative:odatav4adaptor.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D2410F3-9EA0-4D25-8DF0-058BFAD0F839}|odatav4adaptor.client\\odatav4adaptor.client.esproj|d:\\ej2\\samples\\angular\\adaptors\\odatav4adaptor\\odatav4adaptor.client\\src\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3D2410F3-9EA0-4D25-8DF0-058BFAD0F839}|odatav4adaptor.client\\odatav4adaptor.client.esproj|solutionrelative:odatav4adaptor.client\\src\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D2410F3-9EA0-4D25-8DF0-058BFAD0F839}|odatav4adaptor.client\\odatav4adaptor.client.esproj|d:\\ej2\\samples\\angular\\adaptors\\odatav4adaptor\\odatav4adaptor.client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3D2410F3-9EA0-4D25-8DF0-058BFAD0F839}|odatav4adaptor.client\\odatav4adaptor.client.esproj|solutionrelative:odatav4adaptor.client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\ODataV4Adaptor.Server\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "ODataV4Adaptor.Server\\Controllers\\OrdersController.cs",
+              "ToolTip": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\ODataV4Adaptor.Server\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "ODataV4Adaptor.Server\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAwwIYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T13:18:22.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "app.component.ts",
+              "DocumentMoniker": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\odatav4adaptor.client\\src\\app\\app.component.ts",
+              "RelativeDocumentMoniker": "odatav4adaptor.client\\src\\app\\app.component.ts",
+              "ToolTip": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\odatav4adaptor.client\\src\\app\\app.component.ts",
+              "RelativeToolTip": "odatav4adaptor.client\\src\\app\\app.component.ts",
+              "ViewState": "AgIAABAAAAAAAAAAAADwvxgAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-08T12:09:27.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "app.module.ts",
+              "DocumentMoniker": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\odatav4adaptor.client\\src\\app\\app.module.ts",
+              "RelativeDocumentMoniker": "odatav4adaptor.client\\src\\app\\app.module.ts",
+              "ToolTip": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\odatav4adaptor.client\\src\\app\\app.module.ts",
+              "RelativeToolTip": "odatav4adaptor.client\\src\\app\\app.module.ts",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAIAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-04-08T12:08:53.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "app.component.html",
+              "DocumentMoniker": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\odatav4adaptor.client\\src\\app\\app.component.html",
+              "RelativeDocumentMoniker": "odatav4adaptor.client\\src\\app\\app.component.html",
+              "ToolTip": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\odatav4adaptor.client\\src\\app\\app.component.html",
+              "RelativeToolTip": "odatav4adaptor.client\\src\\app\\app.component.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAC2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-04-08T12:06:30.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "styles.css",
+              "DocumentMoniker": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\odatav4adaptor.client\\src\\styles.css",
+              "RelativeDocumentMoniker": "odatav4adaptor.client\\src\\styles.css",
+              "ToolTip": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\odatav4adaptor.client\\src\\styles.css",
+              "RelativeToolTip": "odatav4adaptor.client\\src\\styles.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-08T12:05:12.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\ODataV4Adaptor.Server\\Program.cs",
+              "RelativeDocumentMoniker": "ODataV4Adaptor.Server\\Program.cs",
+              "ToolTip": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\ODataV4Adaptor.Server\\Program.cs",
+              "RelativeToolTip": "ODataV4Adaptor.Server\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T12:04:09.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "package.json",
+              "DocumentMoniker": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\odatav4adaptor.client\\package.json",
+              "RelativeDocumentMoniker": "odatav4adaptor.client\\package.json",
+              "ToolTip": "D:\\EJ2\\Samples\\Angular\\Adaptors\\ODataV4Adaptor\\odatav4adaptor.client\\package.json",
+              "RelativeToolTip": "odatav4adaptor.client\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-08T12:03:07.388Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
