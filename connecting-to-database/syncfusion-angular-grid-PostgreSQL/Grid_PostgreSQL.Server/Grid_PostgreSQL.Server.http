@@ -1,0 +1,6 @@
+@Grid_PostgreSQL.Server_HostAddress = http://localhost:5225
+
+GET {{Grid_PostgreSQL.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
