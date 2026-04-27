@@ -3,9 +3,17 @@ import { CustomAdaptor } from './CustomAdaptor';
 import { DataManager } from '@syncfusion/ej2-data';
 import { EditSettingsModel, ToolbarItems } from '@syncfusion/ej2-angular-grids';
 
+import { GridModule, EditService, ToolbarService, FilterService, SortService, PageService, } from '@syncfusion/ej2-angular-grids';
+
 @Component({
   selector: 'app-root',
+  standalone:true,
+   imports: [
+     GridModule
+  ],
+  providers: [EditService, ToolbarService, FilterService, SortService, PageService],
   templateUrl: './app.component.html',
+  
 })
 export class AppComponent {
   public data?: DataManager;

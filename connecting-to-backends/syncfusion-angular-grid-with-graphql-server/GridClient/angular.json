@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "GridClient:build:production"
+              "buildTarget": "GridClient:build:production"
             },
             "development": {
-              "browserTarget": "GridClient:build:development"
+              "buildTarget": "GridClient:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "GridClient:build"
+            "buildTarget": "GridClient:build"
           }
         },
         "test": {

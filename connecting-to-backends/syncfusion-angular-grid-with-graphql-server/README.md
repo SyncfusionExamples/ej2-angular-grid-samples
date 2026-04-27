@@ -31,6 +31,7 @@ GraphQL is a query language that allows applications to request exactly the data
 - Run the below commands to run the server.
   ```bash
     cd GraphQLServer
+    npm i
     npm start
   ```
   The server is now running at http://localhost:4205/.
@@ -39,6 +40,7 @@ GraphQL is a query language that allows applications to request exactly the data
  - Execute the below commands to run the client application.
   ```bash
   cd GridClient
+  npm i
   npm start
   ```
 - Open http://localhost:4200/ in the browser.
