@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import { EditSettingsModel, GroupSettingsModel, ToolbarItems } from '@syncfusion/ej2-angular-grids';
+import { EditSettingsModel, GroupSettingsModel,GridModule,ToolbarItems, EditService, ToolbarService, FilterService, SortService, PageService, GroupService, AggregateService } from '@syncfusion/ej2-angular-grids';
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  standalone:true,
+  imports: [ GridModule],
+  providers: [EditService, ToolbarService, FilterService, SortService, PageService, GroupService, AggregateService ],
+  templateUrl: './app.component.html', 
 })
 export class AppComponent {
   public data?: DataManager;
@@ -20,8 +23,6 @@ export class AppComponent {
       insertUrl: 'https://localhost:7148/api/data/Insert',
       updateUrl: 'https://localhost:7148/api/data/Update',
       removeUrl: 'https://localhost:7148/api/data/Remove',
-      //batchUrl: 'https://localhost:7148/api/data/BatchUpdate',
-      //crudUrl: 'https://localhost:7148/api/data/CrudUpdate',
       adaptor: new UrlAdaptor()
     });
     this.groupOptions = { columns: ['ShipCountry'] };

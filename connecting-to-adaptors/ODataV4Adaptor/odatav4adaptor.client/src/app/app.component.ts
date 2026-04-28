@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 import { ToolbarItems, EditSettingsModel, PageSettingsModel } from '@syncfusion/ej2-angular-grids';
 import { DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
+import { EditService, FilterService, GridModule, PageService, SortService, ToolbarService } from '@syncfusion/ej2-angular-grids';
+
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  standalone:true,
+  templateUrl: './app.component.html',
+  imports: [GridModule],
+  providers: [EditService, ToolbarService, PageService, SortService, FilterService],
 })
 export class AppComponent {
   public data?: DataManager;

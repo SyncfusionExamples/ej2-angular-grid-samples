@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 import { ToolbarItems, EditSettingsModel } from '@syncfusion/ej2-angular-grids';
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
+import { EditService, FilterService, GridModule, PageService, SortService, ToolbarService } from '@syncfusion/ej2-angular-grids';
+
 
 @Component({
   selector: 'app-root',
+  imports: [ GridModule ],
+  providers: [EditService, ToolbarService, FilterService, SortService, PageService],
   templateUrl: './app.component.html'
 })
 export class AppComponent {
